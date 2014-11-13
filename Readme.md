@@ -2,15 +2,14 @@
 
 Make a FileTree in Ruby.
 
-```
+```ruby
 @t = FileTree.new('path/to/dir')
-
 ```
 
 ##.to_h
 Makes a Hash of Hashes whose keys are the filename and (if directory) have "children" Hashes.
 
-```
+```ruby
 @t = FileTree.new('path/to/dir')
 @t.to_h
 #=> {"dir1"=>
@@ -31,21 +30,18 @@ Makes a Hash of Hashes whose keys are the filename and (if directory) have "chil
   {:children=>nil, :type=>"file", :full_path=>"test/data/file1.txt"},
  "file2.txt"=>
   {:children=>nil, :type=>"file", :full_path=>"test/data/file2.txt"}}
-
 ```
 
 ##.to_html
 Makes ``<ul>`` and ``<li>`` elements out of the files.
 
-```
+```ruby
 @t = FileTree.new('path/to/dir')
-
 ```
 
 ##.to_json
 Makes JSON out of the aforementioned Hash.
 
-```
+```ruby
 @t = FileTree.new('path/to/dir')
-
 ```
