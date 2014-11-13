@@ -1,4 +1,5 @@
 require './tree'
+require 'json'
 
 describe FileTree, 'FileTree' do
 
@@ -36,6 +37,13 @@ describe FileTree, 'FileTree' do
       expect(@t.to_html).to match(re)
     end
 
+  end
+
+  describe '.to_json' do 
+
+    it 'should return valid json' do 
+      expect(JSON.parse(@t.to_json)).to eq(@t.to_h)
+    end
   end
 
 end
